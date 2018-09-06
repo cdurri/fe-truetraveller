@@ -1,6 +1,6 @@
 # FE clone of truetraveller.com homepage with Gulp, PUG, SASS
 
-This is a Pug and Sass starter project using gulp for task automation.
+This is a clone of a homepage that I like the layout of. It's purpose is to practice and sharpen my front-end skills.
 
 ## Local Resources Included:
 
@@ -44,7 +44,19 @@ http://wicky.nillia.ms/headroom.js/
 https://camwiegert.github.io/in-view/
 
 3. Slider carousel:
-https://github.com/ganlanyuan/tiny-slider
+https://github.com/glidejs/glide
+
+4. Pikaday datepicker:
+https://github.com/dbushell/Pikaday
+
+5. BLazy - for lazy loading images:
+https://github.com/dinbror/blazy
+
+6. Moment JS - Parse, Validate and Manipulate dates and times:
+https://github.com/moment/moment
+
+7. Gmaps JS - for integration of Google Maps api and functionality
+https://hpneo.github.io/gmaps/
 
 ## CSS / SASS Styleguide
 
