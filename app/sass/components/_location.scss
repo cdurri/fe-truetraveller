@@ -1,0 +1,25 @@
+.location {
+  padding: 5em 0;
+}
+
+#map {
+  height: 400px;
+  transition: opacity .75s linear;
+  opacity: 0;
+  &.is-inview {
+    opacity: 1;
+  }
+}
+
+.location__title {
+  text-align: center;
+  padding-bottom: 1.375em;
+  position: relative;
+  bottom: -.75em;
+  transition: opacity .75s linear, bottom .75s linear;
+  opacity: 0;
+  &.is-inview {
+    opacity: 1;
+    bottom: 0;
+  }
+}

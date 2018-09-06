@@ -1,0 +1,77 @@
+.insurance-types {
+  padding: 5em 0;
+}
+
+.insurance-types__headline {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: -1.25em;
+  transition: opacity .75s linear, bottom .75s linear;
+  opacity: 0;
+  &.is-inview {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+.insurance-types__inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  @include min-custom-breakpoint('575px') {
+    max-width: 40em;
+  }
+  @include min-custom-breakpoint('1025px') {
+    max-width: 75em;
+  }
+}
+
+.insurance-types__image {
+    transition: all 2s ease-in-out;
+}
+
+.insurance-types__box {
+  width: 50%;
+  margin-top: 2.5em;
+  padding: 0 .75em;
+  position: relative;
+  bottom: -1.25em;
+  transition: opacity .75s linear, bottom .75s linear;
+  opacity: 0;
+  &.is-inview {
+    opacity: 1;
+    bottom: 0;
+  }
+  @include min-custom-breakpoint('1025px') {
+    width: 25%;
+  }
+  &:hover .insurance-types__image {
+    transform: scale(1.25);
+  }
+  &:hover .insurance-types__type {
+    transform: translateY(-.3125em);
+  }
+}
+
+.insurance-types__box-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.insurance-types__box-content {
+  @extend %flex-center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $light;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.insurance-types__type {
+  position: absolute;
+  transition: all .3s linear;
+}

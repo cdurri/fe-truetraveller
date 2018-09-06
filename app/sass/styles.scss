@@ -1,0 +1,27 @@
+@import 'plugins/normalize';
+@import 'variables';
+@import 'extends';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+@import 'layout';
+@import 'blazy';
+
+@import 'plugins/pikaday';
+// Required Core Stylesheet
+@import '../../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
+
+
+@import 'components/index';
+@import 'components/loader';
+@import 'components/header';
+@import 'components/mobile-menu';
+@import 'components/quote-form';
+@import 'components/home-hero';
+@import 'components/selling-points';
+@import 'components/main-information';
+@import 'components/slider';
+@import 'components/footer';
+@import 'components/location';
+@import 'components/insurance-types';
+@import 'components/accordion';

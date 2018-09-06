@@ -1,0 +1,23 @@
+- var nav_links = ['What we offer', ' Who we are', 'Need help?'];
+
+header.header
+  .header__logo-box
+    a(href="#")
+      img(src="./img/truetraveller-logo.png" alt="True Traveller logo").header__logo-image
+  nav.header__nav
+    ul
+      each val in nav_links
+        li
+          a(href="#") 
+            | #{val}
+  .header__right
+    .header__contact-telephone
+      i.ic-phone
+      a(href="#")
+        | 0333 999 3140
+    .header__burger-menu-box
+      i.ic-menu
+      i.ic-close.fade-out
+    .header__strapline 
+      | Travel insurance designed by travellers
+        

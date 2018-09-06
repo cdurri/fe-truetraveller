@@ -1,0 +1,134 @@
+$dot: 0.1rem;
+//min for horizontal mobile
+@mixin min-s {
+  @media (min-width: #{$break-s}) {
+    @content;
+  }
+}
+
+//min for vertical tablet
+@mixin min-sm {
+  @media (min-width: #{$break-sm}) {
+    @content;
+  }
+}
+
+//min for horizontal tablet
+@mixin min-m {
+  @media (min-width: #{$break-m}) {
+    @content;
+  }
+}
+
+//min for desktop
+@mixin min-l {
+  @media (min-width: #{$break-l}) {
+    @content;
+  }
+}
+
+//max for horizontal tablet
+@mixin max-l {
+  @media (max-width: #{$break-l - $dot}) {
+    @content;
+  }
+}
+
+// max for vertical tablet
+@mixin max-m {
+  @media (max-width: #{$break-m - $dot}) {
+    @content;
+  }
+}
+
+// max for horizontal mobile
+@mixin max-sm {
+  @media (max-width: #{$break-sm - $dot}) {
+    @content;
+  }
+}
+
+//max for vertical mobile
+@mixin max-s {
+  @media (max-width: #{$break-s - $dot}) {
+    @content;
+  }
+}
+
+//max for custom break-point
+@mixin max-custom-breakpoint($custom-breakpoint) {
+  @media (max-width: #{$custom-breakpoint - $dot}) {
+    @content;
+  }
+}
+
+//min for custom break-point
+@mixin min-custom-breakpoint($custom-breakpoint) {
+  @media (min-width: #{$custom-breakpoint}) {
+    @content;
+  }
+}
+
+// String Replace
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+
+// Font Face
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-display: fallback;
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+// Animation - Specify rotation direction
+@mixin rotating($direction: right, $level: full) {
+  @keyframes rotating {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      @if $direction == "right" and $level == "full" {
+        transform: rotate(360deg);
+      }
+      @else if $direction == "left" and $level == "full" {
+        transform: rotate(-360deg);
+      }
+      @else if $direction == "right" and $level == "half" {
+        transform: rotate(180deg);
+      }
+      @else if $direction == "left" and $level == "half" {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

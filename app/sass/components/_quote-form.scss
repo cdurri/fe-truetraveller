@@ -1,0 +1,422 @@
+.quote-form {
+  color: $light;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-top: 4.53em;
+  @include min-custom-breakpoint('575px') {
+    padding-top: 5.3em;
+  }
+  @include min-custom-breakpoint('1025px') {
+    padding-top: 5.67em;
+  }
+  .ic-info {
+    position: relative;
+    top: 2px;
+    left: 3px;
+    cursor: pointer;
+  }
+  .ic-location {
+    color: $orange-dark;
+  }
+}
+
+.quote-form__button-mobile {
+  background: $light;
+  .quote-form__button {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    color: #000;
+    background: $orange-dark;
+    cursor: pointer;
+    .ic-arrow-right2 {
+      position: relative;
+      top: 2px;
+      left: 3px;
+    }
+  }
+  @include min-custom-breakpoint('1025px') {
+    display: none;
+  }
+}
+
+.quote-form__fields {
+  position: relative;
+  background: $orange-dark;
+  transition: all .3s linear;
+  @include min-custom-breakpoint('1025px') {
+    height: auto;
+    opacity: 1;
+  }
+  .quote-form-fields__container {
+    padding: 2rem 1rem;
+    @include min-custom-breakpoint('1025px') {
+      display: flex;
+    }
+  }
+}
+
+.quote-form__section {
+  padding-bottom: .7142em;
+  @include min-custom-breakpoint('1025px') {
+    width: 25%;
+    margin-right: 2.142em;
+    padding-bottom: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.quote-form__residency-select, .quote-form__location-select {
+  color: $dark;
+  background: $light;
+  font-size: 1.6rem;
+  padding: 1rem .5rem;
+  margin-top: 1rem;
+  position: relative;
+  .ic-location {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+  }
+}
+
+.quote-form__residency-popover {
+  position: absolute;
+  transform: translate(10%, -0.5%);
+  width: 80%;
+  font-size: 1.8rem;
+  background: $dark-light;
+  transition: all .3s linear;
+  cursor: pointer;
+  z-index: 20;
+  .quote-form__residency-popover-section {
+    padding: 2rem 1rem;
+  }
+  .quote-form--residency-popover-intro {
+    background: $orange-dark;
+    padding-right: 2.2em;
+    .ic-close {
+      content: '';
+      position: absolute;
+      top: 1.6rem;
+      right: 1.6rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+  .quote-form--residency-popover-main {
+    background: $dark-light;
+  }
+  .quote-form--residency-countries-list {
+    font-weight: 400;
+    @include min-custom-breakpoint('1025px') {
+      display: flex;
+    }
+  }
+  .quote-form__country-list {
+    font-size: 0;
+    @include min-custom-breakpoint('1025px') {
+      flex: 1 0 auto;
+    }
+    .quote-form__country-name {
+      font-size: 1.6rem;
+      padding-bottom: 2rem;
+      transition: all .3s linear;
+      &:hover {
+        color: $orange-dark;
+      }
+    }
+  }
+  .quote-form__united-kingdom-flag, .quote-form__ireland-flag, .quote-form__austria-flag, .quote-form__belgium-flag, .quote-form__bulgaria-flag,
+  .quote-form__croatia-flag, .quote-form__cyprus-flag, .quote-form__czech-republic-flag, .quote-form__denmark-flag, .quote-form__estonia-flag,
+  .quote-form__finland-flag, .quote-form__france-flag, .quote-form__germany-flag, .quote-form__gibraltar-flag, .quote-form__greece-flag,
+  .quote-form__guernsey-flag, .quote-form__hungary-flag, .quote-form__iceland-flag, .quote-form__isle-of-man-flag, .quote-form__italy-flag,
+  .quote-form__jersey-flag, .quote-form__latvia-flag, .quote-form__liechtenstein-flag, .quote-form__lithuania-flag, .quote-form__luxembourg-flag,
+  .quote-form__malta-flag, .quote-form__netherlands-flag, .quote-form__norway-flag, .quote-form__poland-flag, .quote-form__portugal-flag, .quote-form__romania-flag,
+  .quote-form__slovak-republic-flag, .quote-form__slovenia-flag, .quote-form__spain-flag, .quote-form__sweden-flag {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url('../img/flags.png');
+  }
+  .quote-form__united-kingdom-flag {
+    background-position: -100px -150px;
+  }
+  .quote-form__ireland-flag {
+    background-position: -25px -75px;
+  }
+  .quote-form__austria-flag {
+    background-position: 0 0;
+  }
+  .quote-form__belgium-flag {
+    background-position: -25px 0;
+  }
+  .quote-form__bulgaria-flag {
+    background-position: -50px 0;
+  }
+  .quote-form__croatia-flag {
+    background-position: -75px 0;
+  }
+  .quote-form__cyprus-flag {
+    background-position: -100px 0;
+  }
+  .quote-form__czech-republic-flag {
+    background-position: 0 -25px;
+  }
+  .quote-form__denmark-flag {
+    background-position: -25px -25px;
+  }
+  .quote-form__estonia-flag {
+    background-position: -50px -25px;
+  }
+  .quote-form__finland-flag {
+    background-position: -75px -25px;
+  }
+  .quote-form__france-flag {
+    background-position: -100px -25px;
+  }
+  .quote-form__germany-flag {
+    background-position: 0 -50px;
+  }
+  .quote-form__gibraltar-flag {
+    background-position: -25px -50px;
+  }
+  .quote-form__greece-flag {
+    background-position: -50px -50px;
+  }
+  .quote-form__guernsey-flag {
+    background-position: -75px -50px;
+  }
+  .quote-form__hungary-flag {
+    background-position: -100px -50px;
+  }
+  .quote-form__iceland-flag {
+    background-position: 0 -75px;
+  }
+  .quote-form__isle-of-man-flag {
+    background-position: -50px -75px;
+  }
+  .quote-form__italy-flag {
+    background-position: -75px -75px;
+  }
+  .quote-form__jersey-flag {
+    background-position: -100px -75px;
+  }
+  .quote-form__latvia-flag {
+    background-position: 0 -100px;
+  }
+  .quote-form__liechtenstein-flag {
+    background-position: -25px -100px;
+  }
+  .quote-form__lithuania-flag {
+    background-position: -25px -100px;
+  }
+  .quote-form__luxembourg-flag {
+    background-position: -75px -100px;
+  }
+  .quote-form__malta-flag {
+    background-position: -100px -100px;
+  }
+  .quote-form__netherlands-flag {
+    background-position: 0 -125px;
+  }
+  .quote-form__norway-flag {
+    background-position: -25px -125px;
+  }
+  .quote-form__poland-flag {
+    background-position: -50px -125px;
+  }
+  .quote-form__portugal-flag {
+    background-position: -75px -125px;
+  }
+  .quote-form__romania-flag {
+    background-position: -100px -125px;
+  }
+  .quote-form__slovak-republic-flag {
+    background-position: 0 -150px;
+  }
+  .quote-form__slovenia-flag {
+    background-position: -25px -150px;
+  }
+  .quote-form__spain-flag {
+    background-position: -50px -150px;
+  }
+  .quote-form__sweden-flag {
+    background-position: -75px -150px;
+  }
+}
+
+.quote-form__already-travelling {
+  display: block;
+  margin-top: 1rem;
+}
+
+.quote-form__already-travelling-checkboxes {
+  display: flex;
+  margin-top: 1rem;
+  span {
+    padding: .3rem 2rem 0 0;
+    font-size: 1.6rem;
+  }
+}
+
+.quote-form__already-travelling-checkbox {
+  display: none;
+  &.quote-form__already-travelling-checkbox:checked + .quote-form--checkbox-label {
+    background: $gray-dark;
+  }
+  &.quote-form__already-travelling-checkbox:checked + .quote-form--checkbox-label.ic-checkmark {
+    color: $light !important;
+  }
+}
+
+.quote-form--checkbox-label {
+  @extend %flex-center;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  margin-right: .8rem;
+  background: $light;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+
+.quote-form {
+  .quote-form--checkbox-label {
+    &.ic-checkmark {
+      color: rgba($gray, .3);
+      font-size: 1.8rem;
+      &:before {
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+      }
+    }
+  }
+}
+
+.quote-form__start-end-date-wrapper {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-top: .7142em;
+  .quote-form__start-date-wrapper, .quote-form__end-date-wrapper {
+    width: 50%;
+    color: $gray-dark;
+  }
+  .quote-form__start-date-wrapper {
+    padding-right: 20px;
+  }
+  .quote-form__end-date-wrapper {
+    position: relative;
+    padding-left: 20px;
+  }
+  .quote-form__start-date-box, .quote-form__end-date-box {
+    height: 112px;
+    width: 100%;
+    background: $light;
+    cursor: pointer;
+  }
+  .quote-form__start-month, .quote-form__end-month {
+    color: $light;
+  }
+  .quote-form__start-date, .quote-form__end-date {
+    font-size: 5.5rem;
+    font-weight: 300;
+  }
+  .quote-form__start-year, .quote-form__end-year {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: -.834em;
+  }
+  .quote-form__start-month, .quote-form__end-month {
+    background: $gray-dark;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .quote-form__to-spacer {
+    position: absolute;
+    top: 47px;
+    left: -8px;
+    font-size: 1.8rem;
+    color: $light;
+  }
+}
+
+.quote-form__age-fields {
+  position: relative;
+  display: flex;
+  margin-top: .7142em;
+  @include min-custom-breakpoint('1025px') {
+    margin-top: 1.785em;
+  }
+}
+
+.quote-form__age-label {
+  @extend .move-off-screen;
+}
+
+.quote-form__age-field {
+  position: relative;
+  width: 16.67%;
+  text-align: center;
+  margin-right: .357em;
+  &:last-child {
+    margin-right: 0;
+  }
+  .ic-user {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: 2.6rem;
+    color: darken($orange-dark, 30%);
+    @include min-custom-breakpoint('1025px') {
+      font-size: 3.3rem;
+      padding-bottom: .48em;
+    }
+  }
+}
+
+@each $num in 1, 2, 3, 4, 5, 6 {
+  .quote-form__age-field:nth-of-type(#{$num}) {
+    &:before {
+      content: '#{$num}';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.quote-form__age-input {
+  width: 100%;
+  text-align: center;
+  &:hover {
+    border: 1px solid darken($orange-dark, 30%);
+  }
+  @include min-custom-breakpoint('1025px') {
+    height: 2.85em;
+  }
+}
+
+.quote-form__get-quote {
+  position: relative;
+  width: 100%;
+  font-size: 2.2rem;
+  color: $light;
+  background: $gray-dark;
+  border: none;
+  padding: .863em 1em;
+  margin-top: .4545em;
+  cursor: pointer;
+  transition: all .3s linear;
+  &:hover {
+    background: darken($gray-dark, 10%);
+  }
+}

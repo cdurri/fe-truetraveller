@@ -1,0 +1,16 @@
+mixin input(name, placeholder, type, value)
+  - if (typeof(type) === 'undefined') type = 'text'
+  - if (typeof(placeholder) === 'undefined') placeholder = ''
+  input(type=type, name=name, id=name, placeholder=placeholder, value=value)&attributes(attributes)
+    
+mixin checkbox(name, id)
+  input(type='checkbox', name=name, id=id)&attributes(attributes)
+    
+mixin button(type, name, value)
+  - if (typeof(type) === 'undefined') type = 'submit'
+  input(type=type, name=name, value=value, id=name)&attributes(attributes)
+    
+mixin textarea(name, placeholder)
+  - if (typeof(type) === 'undefined') type = text
+  - if (typeof(placeholder) === 'undefined') placeholder = ''
+  textarea(name=name, id=name, placeholder=placeholder)&attributes(attributes)

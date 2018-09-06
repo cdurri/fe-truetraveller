@@ -1,0 +1,19 @@
+- var sliderImages = ['./img/usp-slider-01.jpg', './img/usp-slider-02.jpg', './img/usp-slider-03.jpg', './img/usp-slider-04.jpg'];
+
+section.glide
+  h2.glide__headline
+    | You’ll be in 
+    span good hands 
+    | with us
+  .glide__track(data-glide-el='track')
+    ul.glide__slides
+      - for(var i = 0; i < sliderImages.length; i += 1)
+        - var sliderAlt = 'slider ' + i;
+        li.glide__slide
+          img.slider-image.b-lazy(src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src=sliderImages[i] alt=sliderAlt)
+  .glide__arrows(data-glide-el="controls")
+    button.glide__arrow.glide__arrow--left(data-glide-dir="<")
+      i.ic-navigation 
+    button.glide__arrow.glide__arrow--right(data-glide-dir=">")
+      i.ic-navigation
+    

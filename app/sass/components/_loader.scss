@@ -1,0 +1,39 @@
+.preloader {
+  @extend %absolute-full;
+  @extend %flex-center;
+  @extend .fade-in;
+  background: $light;
+  transition: opacity .2s linear;
+  z-index: 9999;
+  &.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.preloader__loader {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  border: 8px solid $gray-dark;
+  border-radius: 50%;
+  animation: rotating 2s infinite linear;
+  &:before {
+   content: '';
+   position: absolute;
+   width: 70px;
+   height: 30px;
+   background: linear-gradient(31deg, $light calc(100% - 3em), transparent .5em), linear-gradient(15deg, $orange calc(100% - 2em), transparent 1em);
+   transform: translate(30%, 50%);
+ }
+ &:after {
+   content: '';
+   position: absolute;
+   width: 70px;
+   height: 30px;
+   background: linear-gradient(-31deg, transparent calc(100% - .85em), $light .5em), linear-gradient(-15deg, transparent calc(100% - 1em), $orange-dark 2em);
+   transform: translate(30%, 150%);
+ }
+}
+
+@include rotating('right', 'full');

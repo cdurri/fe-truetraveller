@@ -1,0 +1,181 @@
+- var travellerNumber = ['one', 'two', 'three', 'four', 'five', 'six'];
+
+.quote-form
+  .quote-form__button-mobile
+    button.quote-form__button Get a quote
+      i.ic-arrow-right2
+  .quote-form__fields
+    .quote-form-fields__container
+      .quote-form__section.quote-form--first-section
+        label(for='residency-select').quote-form__residency-label
+          | Where do you normally live?
+          i.ic-info
+        .quote-form__residency-select
+          span I am a resident of...
+          i.ic-location
+        .quote-form__residency-popover
+          .quote-form__residency-popover-section.quote-form--residency-popover-intro
+            i.ic-close
+            p
+              | We are able to insure permanent residents of the UK and all other Countries in the EEA.
+          .quote-form__residency-popover-section.quote-form--residency-popover-main
+            p
+              | Please select your country of permanent residence from the following:
+          .quote-form__residency-popover-section.quote-form--residency-countries-list
+            ul.quote-form__country-list
+              li.quote-form__country-name
+                .quote-form__united-kingdom-flag
+                span United Kingdom
+              li.quote-form__country-name
+                .quote-form__ireland-flag
+                span Ireland
+              li.quote-form__country-name
+                .quote-form__austria-flag
+                span Austria
+              li.quote-form__country-name
+                .quote-form__belgium-flag
+                span Belgium
+              li.quote-form__country-name
+                .quote-form__bulgaria-flag
+                span Bulgaria  
+              li.quote-form__country-name
+                .quote-form__croatia-flag
+                span Croatia
+              li.quote-form__country-name
+                .quote-form__cyprus-flag
+                span Cyprus
+              li.quote-form__country-name
+                .quote-form__czech-republic-flag
+                span Czech Republic
+              li.quote-form__country-name
+                .quote-form__denmark-flag
+                span Denmark
+            ul.quote-form__country-list
+              li.quote-form__country-name
+                .quote-form__estonia-flag
+                span Estonia
+              li.quote-form__country-name
+                .quote-form__finland-flag
+                span Finland
+              li.quote-form__country-name
+                .quote-form__france-flag
+                span France
+              li.quote-form__country-name
+                .quote-form__germany-flag
+                span Germany
+              li.quote-form__country-name
+                .quote-form__gibraltar-flag
+                span Gibraltar  
+              li.quote-form__country-name
+                .quote-form__greece-flag
+                span Greece
+              li.quote-form__country-name
+                .quote-form__guernsey-flag
+                span Guernsey
+              li.quote-form__country-name
+                .quote-form__hungary-flag
+                span Hungary
+              li.quote-form__country-name
+                .quote-form__iceland-flag
+                span Iceland
+            ul.quote-form__country-list
+              li.quote-form__country-name
+                .quote-form__isle-of-man-flag
+                span Isle of Man
+              li.quote-form__country-name
+                .quote-form__italy-flag
+                span Italy
+              li.quote-form__country-name
+                .quote-form__jersey-flag
+                span Jersey
+              li.quote-form__country-name
+                .quote-form__latvia-flag
+                span Latvia
+              li.quote-form__country-name
+                .quote-form__liechtenstein-flag
+                span Liechtenstein  
+              li.quote-form__country-name
+                .quote-form__lithuania-flag
+                span Lithuania
+              li.quote-form__country-name
+                .quote-form__luxembourg-flag
+                span Luxembourg
+              li.quote-form__country-name
+                .quote-form__malta-flag
+                span Malta
+              li.quote-form__country-name
+                .quote-form__netherlands-flag
+                span Netherlands
+            ul.quote-form__country-list
+              li.quote-form__country-name
+                .quote-form__norway-flag
+                span Norway
+              li.quote-form__country-name
+                .quote-form__poland-flag
+                span Poland
+              li.quote-form__country-name
+                .quote-form__portugal-flag
+                span Portugal
+              li.quote-form__country-name
+                .quote-form__romania-flag
+                span Romania
+              li.quote-form__country-name
+                .quote-form__slovak-republic-flag
+                span Slovak Republic  
+              li.quote-form__country-name
+                .quote-form__slovenia-flag
+                span Slovenia
+              li.quote-form__country-name
+                .quote-form__spain-flag
+                span Spain
+              li.quote-form__country-name
+                .quote-form__sweden-flag
+                span Sweden
+        label.quote-form__already-travelling
+          | Are you already travelling?
+          span.ic-info
+        .quote-form__already-travelling-checkboxes
+          input.quote-form__already-travelling-checkbox(name='already-travelling-radio', id='already-travelling-yes', type="radio")
+          label(for='already-travelling-yes').quote-form--checkbox-label.ic-checkmark
+          span Yes
+          input.quote-form__already-travelling-checkbox(name='already-travelling-radio', id='already-travelling-no', type="radio")
+          label(for='already-travelling-no').quote-form--checkbox-label.ic-checkmark
+          span No
+      .quote-form__section.quote-form--second-section  
+        label.quote-form__date-of-cover 
+          | Choose your dates of cover?
+          i.ic-info
+        .quote-form__start-end-date-wrapper 
+          .quote-form__start-date-wrapper
+            .quote-form__start-date-box
+              .quote-form__start-month
+                | START DATE
+              .quote-form__start-date
+              .quote-form__start-year
+          .quote-form__end-date-wrapper 
+            span.quote-form__to-spacer 
+              | to
+            .quote-form__end-date-box
+              .quote-form__end-month
+                | END DATE
+              .quote-form__end-date
+              .quote-form__end-year
+      .quote-form__section.quote-form--third-section
+        label.quote-form__age-travellers-title
+          | Current age of all travellers
+          i.ic-info
+        .quote-form__age-fields 
+          each val in travellerNumber
+            label.quote-form__age-label(for='traveller-'+val)
+              | Traveller #{val} age
+            .quote-form__age-field
+              span.ic-user
+              +input('traveller-'+val, '', 'text').quote-form__age-input
+      .quote-form__section.quote-form--third-section 
+        label.quote-form__location-title 
+          | Where do you need cover
+          i.ic-info
+        .quote-form__location-select
+          span Select area of cover
+          i.ic-location 
+        +input('get-quote', '', 'submit', 'Get my quote').quote-form__get-quote   

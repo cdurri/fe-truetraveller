@@ -1,0 +1,47 @@
+%container {
+  width: 100%;
+  max-width: $width-page;
+  margin: 0 auto;
+}
+
+// Fill entire container available space
+%absolute-full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// Center elements in the middle of the container
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slide-up {
+  opacity: 0;
+  height: 0;
+}
+
+.slide-down {
+  opacity: 1;
+  height: auto;
+}
+
+.move-off-screen {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}

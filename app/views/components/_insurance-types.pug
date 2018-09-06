@@ -1,0 +1,30 @@
+- var insuranceType = ['Trekking', 'One-way', 'Backpacker', 'Gap Year Travel', 'IEC For Canada', 'Winter Sports', 'Already Travelling', 'Multi-trip'];
+- var imageSRC = ['./img/home-insurance-type-trekking.jpg', './img/home-insurance-type-oneway.jpg', './img/home-insurance-type-backpacker.jpg', './img/home-insurance-type-gapyear.jpg', './img/home-insurance-type-canada.jpg', './img/home-insurance-type-wintersport.jpg', './img/home-insurance-type-alreadytravelling.jpg', './img/home-insurance-type-multitrip.jpg'];
+
+section.insurance-types
+  .insurance-types__inner
+    h2.insurance-types__headline
+      | Types of insurance we can offer you
+    each val, index in insuranceType
+      .insurance-types__box
+        .insurance-types__box-inner
+          a(href="#").insurance-types__box-content
+            img(src="data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src=imageSRC[index] alt=val).insurance-types__image.b-lazy
+            span.insurance-types__type
+              | #{val}
+            
+
+              
+              
+              
+              
+    
+    
+    
+    
+    
+    
+    
+        
+    
+    

@@ -1,0 +1,8 @@
+.pika-select, .pika-next,
+.pika-prev {
+  display: none; }
+
+.pika-single {
+  font-size: 1.6rem;
+  padding: 2.5em;
+  background: blue; }

@@ -1,0 +1,29 @@
+.selling-points {
+  background: darken($gray-light, 1.5%);
+  padding: 1.875em 0 2.8em;
+}
+
+.selling-points__inner {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+.selling-points__point {
+  width: 50%;
+  text-align: center;
+  padding: 0 1em;
+  font-weight: 500;
+  @include min-custom-breakpoint('1025px') {
+    width: 25%;
+  }
+  .ic-checkmark {
+    font-size: 4rem;
+    color: $orange-dark;
+  }
+}
+
+.selling-points__text {
+  padding-top: .5em;
+}

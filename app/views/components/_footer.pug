@@ -1,0 +1,55 @@
+- var insuranceType = ['Trekking', 'One-way', 'Backpacker', 'Gap Year Travel', 'IEC For Canada', 'Winter Sports', 'Already Travelling', 'Multi-trip', 'Scuba Diving'];
+- var support = ['My TT Policy', 'Need Help?', 'Traveller advice', 'Activity packs', 'Make a claim'];
+- var other_info = ['About Us', 'Policy download', 'Privacy Policy', 'Copyright notice'];
+
+footer
+  .footer__inner
+    .footer__links
+      .footer__links-column
+        h4.footer__links-column-title
+          | Travel insurance
+        .footer__links-column-inner
+          ul
+            - for(var i = 0; i < insuranceType.length - 4; i += 1)
+                li
+                  a(href="#").footer__internal-link= insuranceType[i]
+        .footer__links-column-inner
+          ul
+            - for(var i = 5; i < insuranceType.length; i += 1)
+              li
+                a(href="#").footer__internal-link= insuranceType[i]
+      .footer__links-column
+        h4.footer__links-column-title
+          | Support
+        .footer__links-column-inner
+          ul
+            each val in support
+              li
+                a(href="#").footer__internal-link
+                  | #{val}
+        
+      .footer__links-column
+        h4.footer__links-column-title
+          | Other info
+        .footer__links-column-inner
+          ul
+            each val in other_info
+              li
+                a(href="#").footer__internal-link
+                  | #{val}
+      .footer__links-column
+        .footer__links-social-links
+          a(href="https://www.facebook.com" target="_blank" rel="noopener noreferrer")
+            i.ic-facebook
+            span
+              | Facebook social media icon
+              
+          a(href="https://www.twitter.com" target="_blank" rel="noopener noreferrer")
+            i.ic-twitter
+            span
+              | Twitter social media icon    
+          a(href="https://www.instagram.com" target="_blank" rel="noopener noreferrer")
+            i.ic-instagram
+            span 
+              | Instagram social media icon
+        

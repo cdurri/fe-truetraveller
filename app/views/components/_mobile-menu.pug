@@ -1,0 +1,24 @@
+- var insuranceTypeMobile = ['Trekking', 'One-way', 'Backpacker', 'Gap Year Travel', 'IEC For Canada', 'Winter Sports', 'Already Travelling', 'Multi-trip', 'Scuba Diving'];
+- var supportMobile = ['Contact us', 'FAQs', 'Make a claim', 'Activity cover', 'Tips for travelling', 'My TT Policy'];
+
+.mobile-menu.fade-out 
+  .mobile-menu__container
+    ul.mobile-menu__drop
+      li.mobile-menu__nav-item-title
+        a(href="#") What we offer
+        i.mobile-menu__slide-up-down-arrow
+        ul.mobile-menu__drop-sub.slide-up
+          each val in insuranceTypeMobile
+            li
+              a(href="#") 
+               | #{val}
+      li.mobile-menu__nav-item-title
+        a(href="#") Who we are
+      li.mobile-menu__nav-item-title
+        a(href="#") Need help?
+        i.mobile-menu__slide-up-down-arrow
+        ul.mobile-menu__drop-sub.slide-up
+          each val in supportMobile
+            li
+              a(href="#")
+                | #{val}

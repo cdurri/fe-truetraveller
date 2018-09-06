@@ -1,0 +1,75 @@
+.main-information {
+  padding: 5em 0;
+}
+
+.main-information__inner {
+  max-width: 75em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-information__info {
+  padding: 0 4em;
+  line-height: 1.8;
+  @include min-custom-breakpoint('640px') {
+    padding: 0 7em;
+  }
+  @include min-custom-breakpoint('1025px') {
+    padding: 0 9em;
+  }
+}
+
+.main-information__four-cover {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-information__cover-type {
+  position: relative;
+  bottom: -1.25em;
+  width: 100%;
+  padding: 4em 1.875em;
+  color: $light;
+  transition: background .3s linear, opacity .75s linear, bottom .75s linear;
+  opacity: 0;
+  &.is-inview {
+    opacity: 1;
+    bottom: 0;
+  }
+  @include min-custom-breakpoint('640px') {
+    width: 50%;
+  }
+  @include min-custom-breakpoint('1025px') {
+    width: 22.5%;
+    margin: 0 .75em;
+  }
+  &:nth-of-type(1) {
+    background: $orange-dark;
+    &:hover {
+      background: darken($orange-dark, 10%);
+    }
+  }
+  &:nth-of-type(2) {
+    background: $gray;
+    &:hover {
+      background: darken($gray, 10%);
+    }
+  }
+  &:nth-of-type(3) {
+    background: $gray-dark;
+    &:hover {
+      background: darken($gray-dark, 10%);
+    }
+  }
+  &:nth-of-type(4) {
+    background: $brown;
+    &:hover {
+      background: darken($brown, 10%);
+    }
+  }
+  .ic-checkmark {
+    display: block;
+    font-size: 5.625em;
+    padding-bottom: .25em;
+  }
+}
