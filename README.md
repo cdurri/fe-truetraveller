@@ -1,4 +1,4 @@
-# FE starter with Gulp, PUG, SASS
+# FE clone of truetraveller.com homepage with Gulp, PUG, SASS
 
 This is a Pug and Sass starter project using gulp for task automation.
 
