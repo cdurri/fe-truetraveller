@@ -1,4 +1,4 @@
-# FE clone of truetraveller.com homepage with Gulp, PUG, SASS
+# FE clone of truetraveller.com homepage with Gulp, PUG, SASS, Vanilla JS and Performance Optimization techniques for faster page load
 
 This is a clone of a homepage that I like the layout of. It's purpose is to practice and sharpen my front-end skills.
 
